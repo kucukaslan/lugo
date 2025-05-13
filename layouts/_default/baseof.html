@@ -32,5 +32,13 @@
 	{{- if .Param "showrss" }}<br><br><a href="/index.xml"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>{{ end }}
 </footer>
 {{ end }}
+
+
+{{ if .Store.Get "hasMermaid" }}
+<script type="module">
+	import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+	mermaid.initialize({ startOnLoad: true });
+</script>
+{{ end }}
 </body>
 </html>
